@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\EmpController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/emp',array(EmpController::class,'index'))->name('emp');
 Route::get('/', function () {
     return view('welcome');
 });
